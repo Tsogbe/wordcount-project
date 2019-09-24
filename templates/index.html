@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div style="overflow: hidden;">
+    	<h1 style="width: 400px; float: left;">Welcome word count site</h1>
+    	<a href="{% url 'about' %}" style="margin: 29.44px 0px; float: right;">About</a>
+    </div>
+
+    <p>Paste your words in the following text area</p>
+	<form action="{% url 'count' %}">
+    	<textarea rows="12" cols="64" name="fulltext"></textarea>
+
+    	<p>
+    		<input type="submit" value="count" />
+    	</p>
+    </form>
+</body>
+</html>
